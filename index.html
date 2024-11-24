@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shri Krishna Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #FFEB3B, #FF4081);
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            background-size: cover;
+            animation: backgroundAnimation 10s infinite alternate;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(135deg, #FFEB3B, #FF4081);
+            }
+            50% {
+                background: linear-gradient(135deg, #FF9800, #FF5722);
+            }
+            100% {
+                background: linear-gradient(135deg, #FFEB3B, #FF4081);
+            }
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #D32F2F;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+            color: #FF5722;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .service-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            animation: bounceIn 2s ease;
+            border: 2px solid #FF4081;
+            cursor: pointer;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            background-color: #FFEB3B;
+            animation: glowEffect 1s ease-in-out infinite alternate;
+        }
+
+        .service-box h2 {
+            color: #FF5722;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .service-box p {
+            font-size: 1.2em;
+            color: #607D8B;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            color: #FFEB3B;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes glowEffect {
+            0% {
+                box-shadow: 0 0 10px #FF4081, 0 0 20px #FF4081, 0 0 30px #FF4081;
+            }
+            100% {
+                box-shadow: 0 0 10px #FF5722, 0 0 20px #FF5722, 0 0 30px #FF5722;
+            }
+        }
+
+        /* Marquee Quote */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            animation: marqueeAnimation 15s linear infinite;
+        }
+
+        @keyframes marqueeAnimation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .service-box {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            .services {
+                grid-template-columns: 1fr;
+            }
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shri Krishna Online 🎉</h1>
+    <p>Your trusted partner for all driving-related services 💖🚗</p>
+</header>
+
+<section class="services">
+    <div class="service-box">
+        <h2>Learner Licence 🚦</h2>
+        <p>Start your driving journey with ease!</p>
+    </div>
+    <div class="service-box">
+        <h2>Driving Licence 🚗</h2>
+        <p>Your ticket to freedom on the road!</p>
+    </div>
+    <div class="service-box">
+        <h2>DL Renewal 🔄</h2>
+        <p>Keep your driving privileges up to date!</p>
+    </div>
+    <div class="service-box">
+        <h2>Duplicate DL 🔑</h2>
+        <p>If you've lost it, we've got you covered!</p>
+    </div>
+    <div class="service-box">
+        <h2>Change of Address in DL 🏡</h2>
+        <p>Update your address quickly and easily!</p>
+    </div>
+    <div class="service-box">
+        <h2>International Driving Permit (IDP) 🌍</h2>
+        <p>Drive across borders with confidence!</p>
+    </div>
+    <div class="service-box">
+        <h2>DL Extract 📑</h2>
+        <p>Get the official extract of your DL details!</p>
+    </div>
+    <div class="service-box">
+        <h2>Transfer on Ownership 🔑</h2>
+        <p>Transfer vehicle ownership with ease!</p>
+    </div>
+    <div class="service-box">
+        <h2>Duplicate RC 📋</h2>
+        <p>If your RC is lost, we provide a duplicate!</p>
+    </div>
+    <div class="service-box">
+        <h2>Fitness 🚗</h2>
+        <p>Ensure your vehicle meets fitness standards!</p>
+    </div>
+    <div class="service-box">
+        <h2>Registration Renewal 📅</h2>
+        <p>Keep your vehicle's registration active!</p>
+    </div>
+    <div class="service-box">
+        <h2>Road Tax 💰</h2>
+        <p>Stay compliant with your road tax payments!</p>
+    </div>
+    <div class="service-box">
+        <h2>Vehicle Permit 🚚</h2>
+        <p>Need a permit for your vehicle? We handle that!</p>
+    </div>
+    <div class="service-box">
+        <h2>Duplicate Permit 🪪</h2>
+        <p>Lost your vehicle permit? Get a duplicate!</p>
+    </div>
+    <div class="service-box">
+        <h2>RC Particulars 📘</h2>
+        <p>Get detailed info about your vehicle registration!</p>
+    </div>
+    <div class="service-box">
+        <h2>New Vehicle Registration 🚙</h2>
+        <p>Register your brand-new vehicle!</p>
+    </div>
+    <div class="service-box">
+        <h2>NOC 📝</h2>
+        <p>Need a No Objection Certificate? We've got you!</p>
+    </div>
+    <div class="service-box">
+        <h2>HPA Addition/Cancellation 🔄</h2>
+        <p>Change your Hypothecation details easily!</p>
+    </div>
+</section>
+
+<div class="contact-info">
+    <p>Owner: Rachit Jaiswal</p>
+    <p>Phone: 8081828647</p>
+    <p>Email: rj421948@gmail.com</p>
+    <p>Address 1: Sainik Chauraha, Yashoda Nagar, Kanpur Nagar, UP</p>
+    <p>Address 2: Sarvoday Nagar, Rawatpur, Kanpur Nagar, UP</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Shri Krishna Online. All Rights Reserved. | Designed with ❤️ for you!</p>
+</footer>
+
+<!-- Marquee Quote -->
+<div class="marquee">
+    <span id="quote">“हमारी सेवाएं, आपकी सुविधा ✨🚗”</span>
+</div>
+
+<script>
+    // Change Quote on Reload
+    const quotes = [
+        "हमारी सेवाएं, आपकी सुविधा ✨🚗",
+        "सफर अच्छा हो, तो ड्राइविंग लाइसेंस हमारी तरफ से 🌟",
+        "आपका सफर, हमारी जिम्मेदारी 🚗💙",
+        "सुरक्षित यात्रा, हमारी प्राथमिकता 💪🛣️"
+    ];
+    const quoteElement = document.getElementById('quote');
+    quoteElement.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+</script>
+
+</body>
+</html>
